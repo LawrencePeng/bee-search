@@ -2,8 +2,8 @@
 A simple search engine for school's news board.
 
 
-#使用说明
-> 本地安装:
+# Instructions for use
+> Local installation:
 - node
 - npm
 - [mongodb](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
@@ -12,7 +12,6 @@ A simple search engine for school's news board.
 - pymongo
 - [Flask](http://docs.jinkan.org/docs/flask/installation.html#installation)
 - [“结巴”中文分词](https://github.com/fxsjy/jieba)
-
 
 ## front-end
 ### install dependencies
