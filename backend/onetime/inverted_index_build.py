@@ -11,6 +11,7 @@ real_docs = docs.find()
 inverted_index = {}
 
 
+# 从文档对应的url中提取其id值
 def get_id(doc):
     """
     get id by doc.url
@@ -23,15 +24,16 @@ def get_id(doc):
 
 
 for r_doc in real_docs:
-    # 使用jieba分词算法对中文文档进行分词
+    # 使用结巴分词算法对中文文档进行分词
+    # jieba.cut返回的结构是一个可迭代的generator，需要list接收，再用set去重
     doc_title = set(list(jieba.cut(r_doc['title'])))
     doc_content = set(list(jieba.cut(r_doc['content'])))
     identify = get_id(r_doc)
 
     for word in doc_title | doc_content:
+        # 查询是否含有对应的词项，如果没有，返回一个空的list
         w_list = inverted_index.get(word, list())
         w_list.append(identify)
-        w_list.sort()
         inverted_index[word] = w_list
 
 
