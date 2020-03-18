@@ -30,3 +30,8 @@ node spider.js
 python inverted_index_build.py
 ### run server
 python main.py
+
+
+当时我们一起完成的搜索引擎网站，功能是爬取深大通的文章，然后可以搜索。我还记得那个时候在信工楼，我们一起搞定爬虫，你看到快速闪烁的日志时的兴奋感。
+python inverted_index_build.py我们
+python inverted_index_build.py
